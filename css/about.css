@@ -1,0 +1,115 @@
+body{
+background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+background-attachment: fixed;
+}
+/*页面背景设置*/
+ a{
+color:#ffefdb;	
+}
+ a:hover{
+	color:#add8e8;
+}
+/*左上角链接样式*/
+h1{
+	font-size: 35px;
+	margin: 10px 0 0 0 ;
+	color:#6495ed;
+	text-shadow:  5px 5px 5px gray;
+	text-align: center;
+}
+/*大标题*/
+section{
+	width: 100%;
+	height: 20%;
+}
+section p{
+	text-align: right;
+	font-size: 15px;
+}
+.contain-item{
+	width:970px ;
+	height:250px;
+	border: 1px solid #4169e1;
+	border-radius:9px;
+	font-size: 18px;
+	margin: 70px 300px 200px 300px;
+}
+/*弹性盒子设置*/
+.link{
+	margin: 5px 5px 0 5px  !important;
+	font-size:15px !important ;
+}
+/*链接样式*/
+a{
+	color:blue;
+	font-size: 18px;
+	text-decoration: none;
+}
+a:hover{
+	color:white;
+}
+a:active{
+	color:purple;
+}
+/*悬停、激活样式*/
+.feed{
+	font-size: 35px;
+}
+#hidebg {
+	position:absolute;
+	left:0px;
+	top:0px;
+	background-color:#000;
+	width:100%;
+	filter:alpha(opacity=60);
+	opacity:0.6;
+	display:none;
+	z-Index:2;
+}
+
+#feedform{
+	width: 30%;
+	height: 250px;
+	border-radius: 7px;
+	position: fixed;
+	text-align: center;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 99;
+	background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+.formclose{
+	width: 100%;
+	height:40px;
+	background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+	border-top-left-radius:7px ;
+	border-top-right-radius:7px ;
+}
+/*窗口关闭按钮div层*/
+.formclose img{
+	float: right;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+/*窗口关闭按钮样式*/
+textarea{
+	border-radius: 9px;
+	font-size: 15px;
+
+}
+input[type="submit"],[type="reset"]{
+	font-size: 15px;
+	border-radius:6px;
+	background-color:dodgerblue;
+	width:85px;
+	height:30px;
+	margin:15px 10px;
+}
+.tip{
+	color:black !important;
+	font-size: 13px;
+}

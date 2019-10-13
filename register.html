@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport"  content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">		<title>用户注册</title>
+		<link href="css/register.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<h1>用户注册</h1>
+		<div id="menu">
+		<ul>
+				<li><a href="index.html"><<&nbsp;返回首页</a></li>
+				</ul>
+				</div>
+		
+		<form action="php/reg.php" method="post">
+			<div class="flex-reg">
+			<div class="reg-item">
+				<!--弹性盒子-->
+			<p>昵称：<input type="text" name="userid" placeholder="请输入自定义昵称"  oninvalid="setCustomValidity('请输入用户名');" required></p>
+			<p>密码：<input type="password" name="password" placeholder="请输入密码"  pattern="[a-z0-9_*+#/\@]" oninvalid="setCustomValidity('请输入正确的密码格式');" minlength="6" required></p>
+			<p class="tip">*请注意密码必须6位及以上(小写字母，数字及下划线)</p>
+			<!--表单规定验证-->
+			<p>出生年月：<input type="number" name="years" min="1890" max="2019"  >年&nbsp;
+			<input type="number" name="mon" min="1" max="12"  >月&nbsp;
+			<input type="number" name="days" min="1" max="31"  >日</p>
+			<p >性别：<input type="radio" name="sex" value="man" >男&nbsp;<input type="radio" name="sex" value="women">女</p>
+			<p>邮箱地址：<input type="email" name="email" placeholder="请填写个人/企业邮箱" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" class="regtext" oninvalid="setCustomValidity('请输入正确邮箱地址');"></p>
+			<p><input type="submit" value="确认注册" name="button"  class="btn" >&nbsp;<input type="reset" value="重置" name="button"  class="btn1"></p>
+			</div>
+			</div>
+			</form>
+			<footer>
+			<p class="footer">@Copyright 江西现代学院&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;phone-shop</p>
+			</footer>
+	</body>
+</html>

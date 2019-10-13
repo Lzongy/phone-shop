@@ -1,0 +1,272 @@
+body{
+background-image: url('../image/u_img.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment:fixed;
+background-position: center 0;
+}
+/*页面背景设置*/
+#menu ul{
+list-style-type:none;
+text-decoration:none;
+background:#00000000;
+overflow:hidden;
+width:100%;
+height:35px;
+margin:0; 
+padding:3px;
+top:0;
+position:absolute;
+}
+#menu ul li{
+display:inline;
+}
+#menu ul li a {
+	text-decoration: none;
+	font-size: 17px;
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #6495ed;
+}
+#menu ul li a:hover{
+	color: gray;
+}
+/*顶部导航条*/
+h1{
+	font-size:33px;
+	margin:25px 0 0 0;
+	text-shadow: 5px 5px 5px gray;
+	color:#6495ed;
+	font-family: "Apple Color Emoji";
+}
+#left-menu{
+	width:300px;
+	height:auto;
+	background-color:#00000000;
+	float: left;
+	position: fixed;
+}
+#left-menu ul{
+	list-style-type: none;
+	overflow:hidden;
+	float: left;
+	margin: 20px 0 0 25px ;
+	padding: 0;
+}
+#left-menu ul li a{
+	width:100px;
+	height:30px;
+	text-decoration:none;
+	color:#6495ed;
+	font-size: 20px;
+	border:1px solid #ccc;
+	border-radius: 10px;
+	padding: 5px 12px;
+	display: block;
+}
+#left-menu li a  span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#left-menu li a span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#left-menu li a :hover span {
+  padding-right: 25px;
+}
+
+#left-menu li a :hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#left-menu a:hover{
+	color:black;
+	background-color:#a4d3ee;
+	opacity:0.7;
+}
+/*左侧导航条*/
+.coll-con{
+	display: -webkit-flex;
+    display: flex;
+    width:1024px;
+    height: 350px;
+	border:2px solid skyblue;
+	border-radius: 10px;
+    background-color:#00000000;
+	margin:20px 200px 40px 300px;
+}
+.icon-mi{
+	width:150px;
+	height:40px;
+	background-color:orange;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:27px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+	margin:0 700px;
+}
+.icon-mi:hover{
+		box-shadow:3px 3px 4px 4px gray;
+}
+/*小米弹性盒子样式*/
+.icon-hw{
+	width:150px;
+	height:40px;
+	background-color:#CC3300;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:27px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+	margin:0 700px;
+}
+.icon-hw:hover{
+		box-shadow:3px 3px 4px 4px gray;
+}
+/*华为弹性盒子*/
+.icon-oppo{
+	width:150px;
+	height:40px;
+	background-color:green;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:27px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+	margin:0 700px;
+}
+.icon-oppo:hover{
+		box-shadow:3px 3px 4px 4px gray;
+}
+/*oppo弹性盒子*/
+.icon-vivo{
+	width:150px;
+	height:40px;
+	background-color:#3366ff;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:27px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+	margin:0 700px;
+}
+.icon-vivo:hover{
+		box-shadow:3px 3px 4px 4px gray;
+}
+/*vivo弹性盒子*/
+.icon-iphone{
+	width:150px;
+	height:40px;
+	background-color:black;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:27px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+	margin:0 700px;
+}
+.icon-iphone:hover{
+		box-shadow:3px 3px 4px 4px gray;
+}
+/*ip弹性盒子*/
+.icon-Samsung{
+	width:150px;
+	height:40px;
+	background-color:#000099;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:27px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+	margin:0 700px;
+}
+.icon-Samsung:hover{
+		box-shadow:3px 3px 4px 4px gray;
+}
+/*三星弹性盒子*/
+.icon-lenovo{
+	width:150px;
+	height:40px;
+	background-color:red;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:27px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+	margin:0 700px;
+}
+.icon-lenovo:hover{
+		box-shadow:3px 3px 4px 4px gray;
+}
+/*联想弹性盒子*/
+.icon-mz{
+	width:150px;
+	height:40px;
+	background-color:#0099ff;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:27px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+	margin:0 700px;
+}
+.icon-mz:hover{
+		box-shadow:3px 3px 4px 4px gray;
+}
+/*魅族弹性盒子*/
+p#back-to-top{
+	position: fixed;
+	display: none;
+	bottom:10px;
+	left:40px;
+	width:55px;
+	height: 60px;
+	background-image: url('../image/to-top.png');
+	border-radius: 90px;
+}
+p#back-to-top{
+	display: block;
+	width:64px;
+	-webkit-transition: color 1s;
+	transition: color 1s;
+}
+p#back-to-top:hover{
+	color:#979797;
+	opacty:0.8;
+}
+p#back-to-top a span{
+	border-radius: 6px;
+	display: block;
+	height: 64px;
+	width:56px;
+	margin-bottom: 5px;
+	-webkit-transition:background 1s;
+	transition: background 1s;
+}
+/*返回顶部*/

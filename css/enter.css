@@ -1,0 +1,100 @@
+body{
+background-image:url('../image/system.jpg');
+background-attachment:fixed;
+background-size:100% 100%;
+background-repeat:no-repeat;
+margin:0;
+}
+/*页面背景样式*/
+#menu ul{
+list-style-type:none;
+text-decoration:none;
+background:#00000000;
+overflow:hidden;
+width:100%;
+height:35px;
+margin:0; 
+padding:3px;
+top:0;
+position:absolute;
+}
+#menu ul li{
+display:inline;
+}
+#menu ul li a{
+color:cornflowerblue;
+text-decoration:none;
+font-size:17px;
+padding-left:15px;
+padding-right:15px;
+}
+#menu ul li a:hover{
+	color:#add8e8;
+}
+/*左上角链接样式*/
+input:not(.rem){
+	width:270px;
+	height:30px;
+	border-radius:5px;
+	display:block;
+	font-size:16px;
+	color:#1C86ee;
+	padding:3px 0 0 5px;
+}
+span{
+	font-size: 15px !important;
+	margin: 0;
+	padding: 0;
+}
+input:focus{
+	box-shadow:5px 5px 5px 5px gray;
+	overflow:hidden;
+	
+}
+/*表单文本框样式*/
+.btn{
+	-webkit-appearance: button;
+}
+input[type="submit"]{
+	width:70px;
+	height:30px;
+	border-radius:5px;
+	font-size: 15px;
+	margin: 15px 0px 0 100px ;
+}
+input[type="reset"]{
+	width:70px;
+	height:30px;
+	border-radius:5px;
+	font-size: 15px;
+	margin: -30px 50px 0 200px;
+}
+.btn:hover{
+	box-shadow:3px 2px 2px 3px gray;
+}
+/*表单按钮样式*/
+h2{
+	font-size:30px;
+	text-align:center;
+}
+/*大标题*/
+.flex-enter{
+	width:700px;
+	height:400px;
+    display:-webkit-flex;
+	display:flex;
+	margin:100px 460px;
+}
+.enter-item{
+	text-align:center;
+	width:400px;
+	height:220px;
+	margin:60px 70px;
+	font-size:18px;
+	border:2px solid;
+	border-radius:26px;
+}
+/*弹性盒子样式*/
+div .enter-item,p{
+	padding:10px 0;
+}

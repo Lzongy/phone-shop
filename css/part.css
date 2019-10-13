@@ -1,0 +1,431 @@
+/*
+*小米品牌专区
+*/
+.xiaomi{
+	width:200px;
+	height:50px;
+	margin:35px auto;
+	background-color:#ff6600;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:25px;
+	color:#fff;
+	line-height:50px;
+	text-align:center;
+}
+.xiaomi:hover{
+	top:-5px;
+	box-shadow:0 0 15px #AAA;
+}
+/*英文logo*/
+.icon_mi_en{
+	font-size:20px;
+	padding:0;
+	color:orange;
+}
+/*小米商品区域*/
+.pro_mi{
+	-webkit-flex-direction:row-reverse;
+	flex-direction:row-reverse;
+	display:-moz-flex;
+	display:flex;
+	width:100%;
+	height:300px;
+	background:#00000000;
+	-webkit-justify-content:center;
+	justify-content:center;
+}
+/*商品图片*/
+.mi_pic{
+	padding:0 40px 0 25px;
+}
+/*图片链接*/
+.mi_pic_a{
+	display:inline-block;
+	padding:3px;
+	transition:0.2s;
+}
+.mi_pic_a:hover{
+	border:2px solid orange;
+	border-radius:5px;
+	opacity:0.7;
+}
+
+/*
+*华为品牌专区
+*/
+ .huawei{
+	width:200px;
+	height:50px;
+	margin:35px auto;
+	background-color:#CC3300;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:25px;
+	color:#fff;
+	line-height:50px;
+	text-align:center;
+}
+.huawei:hover{
+	top:-5px;
+	box-shadow:0 0 15px #AAA;
+}
+/*英文logo*/
+.icon_hw_en{
+	font-size:20px;
+	padding:0;
+	color:red;
+}
+/*华为商品区域*/
+.pro_hw{
+	-webkit-flex-direction:row-reverse;
+	flex-direction:row-reverse;
+	display:-webkit-flex;
+	display:flex;
+	width:100%;
+	height:300px;
+	background:#00000000;
+	-webkit-justify-content:center;
+	justify-content:center;
+}
+/*商品图片*/
+.hw_pic{
+	padding:0 18px 0 18px;
+}
+.hw_pic_a{
+	display:inline-block;
+	padding:3px;
+	transition:0.2s;
+}
+.hw_pic_a:hover{
+	border:2px solid red;
+	border-radius:5px;
+	opacity:0.7;
+}
+
+/*
+*OPPO品牌专区
+*/
+.oppo{
+	width:200px;
+	height:50px;
+	margin:35px auto;
+	background-color:#009966;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:25px;
+	color:#fff;
+	line-height:50px;
+	text-align:center;
+}
+.oppo:hover{
+	top:-5px;
+	box-shadow:0 0 15px #aaa;
+}
+/*英文logo*/
+.icon_op_en{
+	font-size:20px;
+	padding:0;
+	color:green;
+}
+/*OPPO商品区域*/
+.pro_op{
+	-webkit-flex-direction:row-reverse;
+	flex-direction:row-reverse;
+	display:-moz-flex;
+	display:flex;
+	width:100%;
+	height:300px;
+	background:#00000000;
+	-webkit-justify-content:center;
+	justify-content:center;
+}
+/*商品图片*/
+.op_pic{
+	padding:0 18px 0 18px;
+}
+.op_pic_a{
+	display:inline-block;
+	padding:3px;
+	transition:0.2s;
+}
+.op_pic_a:hover{
+	border:2px solid green;
+	border-radius:5px;
+	opacity:0.7;
+}
+
+/*
+*vivo品牌专区
+*/
+.vivo{
+	width:200px;
+	height:50px;
+	margin:35px auto;
+	background-color:#3366ff;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:25px;
+	color:#fff;
+	line-height:50px;
+	text-align:center;
+}
+.vivo:hover{
+	top:-5px;
+	box-shadow:0 0 15px #aaa;
+}
+/*英文logo*/
+.icon_vi_en{
+	font-size:20px;
+	padding:0;
+	color:blue;
+}
+/*vivo商品区域*/
+.pro_vi{
+	-webkit-flex-direction:row-reverse;
+	flex-direction:row-reverse;
+	display:-moz-flex;
+	display:flex;
+	width:100%;
+	height:300px;
+	background:#00000000;
+	-webkit-justify-content:center;
+	justify-content:center;
+}
+/*商品图片*/
+.vi_pic{
+	padding:0 30px 0 30px;
+}
+.vi_pic_a{
+	display:inline-block;
+	padding:3px;
+	transition:0.2s;
+}
+.vi_pic_a:hover{
+	border:2px solid blue;
+	border-radius:5px;
+	opacity:0.7;
+}
+
+/*
+*iPhone品牌专区
+*/
+.iphone{
+	width:200px;
+	height:50px;
+	margin:35px auto;
+	background-color:black;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:25px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+}
+.iphone:hover{
+	top:-5px;
+	box-shadow:0 0 25px #aaa;
+}
+/*英文logo*/
+.icon_ip_en{
+	font-size:20px;
+	padding:0;
+	color:white;
+}
+/*iPhone商品区域*/
+.pro_ip{
+	-webkit-flex-direction:row-reverse;
+	flex-direction:row-reverse;
+	display:-moz-flex;
+	display:flex;
+	width:100%;
+	height:300px;
+	background:#00000000;
+	-webkit-justify-content:center;
+	justify-content:center;
+}
+/*商品图片*/
+.ip_pic{
+	padding:0 40px 0 40px;
+}
+.ip_pic_a{
+	display:inline-block;
+	padding:3px;
+	transition:0.2s;
+}
+.ip_pic_a:hover{
+	border:2px solid white;
+	border-radius:5px;
+	opacity:0.7;
+}
+
+/*
+*三星品牌专区
+*/
+.samsung{
+	width:200px;
+	height:50px;
+	margin:35px auto;
+	background-color:#000099;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:25px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+}
+.samsung:hover{
+	top:-5px;
+	box-shadow:0 0 15px #aaa;
+}
+/*英文logo*/
+.icon_sm_en{
+	font-size:20px;
+	padding:0;
+	color:purple;
+}
+/*三星商品区域*/
+.pro_sm{
+	-webkit-flex-direction:row-reverse;
+	flex-direction:row-reverse;
+	display:-moz-flex;
+	display:flex;
+	width:100%;
+	height:300px;
+	background:#00000000;
+	-webkit-justify-content:center;
+	justify-content:center;
+}
+/*商品图片*/
+.sm_pic{
+	padding:0 40px 0 40px;
+}
+.sm_pic_a{
+	display:inline-block;
+	padding:3px;
+	transition:0.2s;
+}
+.sm_pic_a:hover{
+	border:2px solid purple;
+	border-radius:5px;
+	opacity:0.7;
+}
+
+/*
+*联想品牌专区
+*/
+.lenovo{
+	width:200px;
+	height:50px;
+	margin:35px auto;
+	background-color:red;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:25px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+}
+.lenovo:hover{
+	top:-5px;
+	box-shadow:0 0 15px #aaa;
+}
+/*英文logo*/
+div .icon_le_en{
+	font-size:20px;
+	padding:0;
+	color:#FFF8DC;
+}
+/*联想商品区域*/
+.pro_le{
+	-webkit-flex-direction:row-reverse;
+	flex-direction:row-reverse;
+	display:-moz-flex;
+	display:flex;
+	width:100%;
+	height:300px;
+	background:#00000000;
+	-webkit-justify-content:center;
+	justify-content:center;
+}
+/*商品图片*/
+.le_pic{
+	padding:0 40px 0 40px;
+}
+.le_pic_a{
+	display:inline-block;
+	padding:3px;
+	transition:0.2s;
+}
+.le_pic_a:hover{
+	border:2px solid #FFF8DC;
+	border-radius:5px;
+	opacity:0.7;
+}
+/*
+*魅族品牌专区
+*/
+.meizu{
+	width:200px;
+	height:50px;
+	margin:35px auto;
+	background-color:#0099ff;
+	border:2px solid #fff;
+	border-radius:20px;
+	font-family:'Microsoft Yahei';
+	font-size:25px;
+	color:white;
+	line-height:50px;
+	text-align:center;
+}
+.meizu:hover{
+	top:-5px;
+	box-shadow:0 0 15px #aaa;
+}
+/*英文logo*/
+.icon_mz_en{
+	font-size:20px;
+	padding:0;
+	color:#8DB6CD;
+}
+/*魅族商品区域*/
+.pro_mz{
+	-webkit-flex-direction:row-reverse;
+	flex-direction:row-reverse;
+	display:-moz-flex;
+	display:flex;
+	width:100%;
+	height:300px;
+	background:#00000000;
+	-webkit-justify-content:center;
+	justify-content:center;
+}
+/*商品图片*/
+.mz_pic{
+	padding:0 40px 0 40px;
+}
+.mz_pic_a{
+	display:inline-block;
+	padding:3px;
+	transition:0.2s;
+}
+.mz_pic_a:hover{
+	border:2px solid #8DB6CD;
+	border-radius:5px;
+	opacity:0.7;
+}
+
+/*
+*底部文字描述
+*/
+.desc{
+	text-align:center;
+	padding:5px;
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" >
+    <meta name="viewport"  content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+    <title>首页</title>
+    <link href="css/top-bottom.css" rel="stylesheet" type="text/css" />
+    <link href="css/part.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/back.js"></script>
+</head>
+<body>
+<!--顶部导航条-->
+<div id="menu">
+    <a name="top"></a>
+    <ul>
+        <li><a href="collect.html" id="link_coll" style="display: none">收藏夹</a></li>
+        <li><a href="order.html" id="link_order" style="display: none">我的订单</a></li>
+        <li><a href="userinfo.html" id="link_user" style="display: none">用户中心</a></li>
+        <li style="float:right;"><a href="index.html">返回主界面</a></li>
+        <li><a href="#" onclick="display()" id="check_session">登录用户请点击</a></li>
+        <li><a href="about.html">关于</a></li>
+    </ul>
+</div>
+<!--头部标题-->
+<div class="pro_section" style="width: 100%;height: auto;">
+<header>
+    <img src="image/index.jpg" style="width:100%;height:100%;background-attachment:fixed;border-radius:10px">
+    <p class="tfont">万物互联 引领智能新时代</p>
+</header>
+
+<!--商品区域-->
+<!--小米商品-->
+<div class="products">
+    <div class="xiaomi">小米</div>
+    <div class="icon_mi_en">Mi.com</div>
+    <hr color="orange" size="2" width="100%">
+    <div class="pro_mi">
+        <div class="mi_pic"><div class="mi_pic_a" a target="_blank" href="phone/mi/mi helo.jpg"><img src="phone/mi/mi helo.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">黑鲨游戏手机</div>
+        </div>
+        </div>
+        <div class="mi_pic"><div class="mi_pic_a" a target="_blank" href="phone/mi/redmi.png"><img src="phone/mi/redmi.png" style="width:200px;height:250px;"></a>
+            <div class="desc">真旗舰 敢KO Redmi K20 pro</div>
+        </div>
+        </div>
+        <div class="mi_pic"><div class="mi_pic_a" a target="_blank" href="phone/mi/mi 8.png"><img src="phone/mi/mi 8.png" style="width:150px;height:250px;"></a>
+            <div class="desc">小米8周年旗舰机</div>
+        </div>
+        </div>
+        <div class="mi_pic"><div class="mi_pic_a" a target="_blank" href="phone/mi/mi 9.jpg"><img src="phone/mi/mi 9.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">小米9年度旗舰机</div>
+        </div>
+        </div>
+    </div>
+
+    <!--华为商品-->
+    <div class="huawei">华为</div>
+    <div class="icon_hw_en">Huawei.com</div>
+    <hr color="red" size="2" width="100%">
+    <div class="pro_hw">
+        <div class="hw_pic"><div class="hw_pic_a" a target="_blank" href="phone/hw/nove4.jpg"><img src="phone/hw/nove4.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">极点全面屏 华为nova4</div>
+        </div>
+        </div>
+        <div class="hw_pic"><div class="hw_pic_a" a target="_blank" href="phone/hw/p20.jpg"><img src="phone/hw/p20.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">AI摄影大师 华为P20</div>
+        </div>
+        </div>
+        <div class="hw_pic"><div class="hw_pic_a" a target="_blank" href="phone/hw/p30.png"><img src="phone/hw/p30.png" style="width:250px;height:250px;"></a>
+            <div class="desc">未来影响 华为P30</div>
+        </div>
+        </div>
+        <div class="hw_pic"><div class="hw_pic_a" a target="_blank" href="phone/hw/mate20(2).jpg"><img src="phone/hw/mate20(2).jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">华为Mate 20旗舰机</div>
+        </div>
+        </div>
+    </div>
+
+    <!--OPPO商品-->
+    <div class="oppo">Oppo</div>
+    <div class="icon_op_en">Oppo.com</div>
+    <hr size="2" color="green" width="100%">
+    <div class="pro_op">
+        <div class="op_pic"><div class="op_pic_a" a target="_blank" href="phone/oppo/reno.png"><img src="phone/oppo/reno.png" style="width:250px;height:250px;"></a>
+            <div class="desc">想象更近一点 OPPO Reno</div>
+        </div>
+        </div>
+        <div class="op_pic"><div class="op_pic_a" a target="_blank" href="phone/oppo/realme.png"><img src="phone/oppo/realme.png" style="width:250px;height:250px;"></a>
+            <div class="desc">越级新物种  OPPO realme</div>
+        </div>
+        </div>
+        <div class="op_pic"><div class="op_pic_a" a target="_blank" href="phone/oppo/r17.jpg"><img src="phone/oppo/r17.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">心动设计 Oppo R17</div>
+        </div>
+        </div>
+        <div class="op_pic"><div class="op_pic_a" a target="_blank" href="phone/oppo/find x.jpg"><img src="phone/oppo/find x.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">探索未来手机形态 Oppo Findx</div>
+        </div>
+        </div>
+    </div>
+
+    <!--vivo商品-->
+    <div class="vivo">Vivo</div>
+    <div class="icon_vi_en">Vivo.com</div>
+    <hr size="2" color="blue" width="100%">
+    <div class="pro_vi">
+        <div class="vi_pic"><div class="vi_pic_a" a target="_blank" href="phone/vivo/z3.jpg"><img src="phone/vivo/z3.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">性能实力派 Vivo z3</div>
+        </div>
+        </div>
+        <div class="vi_pic"><div class="vi_pic_a" a target="_blank" href="phone/vivo/x23.jpg"><img src="phone/vivo/x23.jpg" style="width:200px;height:250px;"></a>
+            <div class="desc">幻彩 Vivo X23</div>
+        </div>
+        </div>
+        <div class="vi_pic"><div class="vi_pic_a" a target="_blank" href="phone/vivo/iqoo.jpg"><img src="phone/vivo/iqoo.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">生而强悍 IQOO</div>
+        </div>
+        </div>
+        <div class="vi_pic"><div class="vi_pic_a" a target="_blank" href="phone/vivo/nex dual.jpg"><img src="phone/vivo/nex dual.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">双屏旗舰 Vivo nex</div>
+        </div>
+        </div>
+    </div>
+
+    <!--iPhone商品-->
+    <div class="iphone">iPhone</div>
+    <div class="icon_ip_en">iPhone.com/cn</div>
+    <hr size="2" color="white" width="100%">
+    <div class="pro_ip">
+        <div class="ip_pic"><div class="ip_pic_a" a target="_blank" href="phone/iphone/8p.jpg"><img src="phone/iphone/8p.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">iPhone 8Plus</div>
+        </div>
+        </div>
+        <div class="ip_pic"><div class="ip_pic_a" a target="_blank" href="phone/iphone/xr.jpg"><img src="phone/iphone/xr.jpg" style="width:200px;height:250px;"></a>
+            <div class="desc">iPhone XR</div>
+        </div>
+        </div>
+        <div class="ip_pic"><div class="ip_pic_a" a target="_blank" href="phone/iphone/x.jpg"><img src="phone/iphone/x.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">iPhone X</div>
+        </div>
+        </div>
+        <div class="ip_pic"><div class="ip_pic_a" a target="_blank" href="phone/iphone/xs.jpg"><img src="phone/iphone/xs.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">iPhone XS</div>
+        </div>
+        </div>
+    </div>
+
+    <!--三星商品-->
+    <div class="samsung">Samsung</div>
+    <div class="icon_sm_en">Samsung.com/cn</div>
+    <hr size="2" color="purple" width="100%">
+    <div class="pro_sm">
+        <div class="sm_pic"><div class="sm_pic_a" a target="_blank" href="phone/sm/note 9.jpg"><img src="phone/sm/note 9.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">Samsung Galaxy note9</div>
+        </div>
+        </div>
+        <div class="sm_pic"><div class="sm_pic_a" a target="_blank" href="phone/sm/s8.jpg"><img src="phone/sm/s8.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">Samsung Galaxy s8</div>
+        </div>
+        </div>
+        <div class="sm_pic"><div class="sm_pic_a" a target="_blank" href="phone/sm/s9.jpg"><img src="phone/sm/s9.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">Samsung Galaxy s9</div>
+        </div>
+        </div>
+        <div class="sm_pic"><div class="sm_pic_a" a target="_blank" href="phone/sm/s10.jpg"><img src="phone/sm/s10.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">Samsung Galaxy s10</div>
+        </div>
+        </div>
+    </div>
+
+    <!--联想商品-->
+    <div class="lenovo">lenovo</div>
+    <div class="icon_le_en">lenovo.com</div>
+    <hr size="2" color="#FFF8DC" width="100%">
+    <div class="pro_le">
+        <div class="le_pic"><div class="le_pic_a" a target="_blank" href="phone/len/s5 pro.jpg"><img src="phone/len/s5 pro.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">AI四摄 Lenovo S5 pro</div>
+        </div>
+        </div>
+        <div class="le_pic"><div class="le_pic_a" a target="_blank" href="phone/len/s5.jpg"><img src="phone/len/s5.jpg" style="width:270px;height:250px;"></a>
+            <div class="desc">美耀全面屏 Lenovo S5</div>
+        </div>
+        </div>
+        <div class="le_pic"><div class="le_pic_a" a target="_blank" href="phone/len/z5 pro.jpg"><img src="phone/len/z5 pro.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">划时代旗舰 Lenovo Z5 pro</div>
+        </div>
+        </div>
+        <div class="le_pic"><div class="le_pic_a" a target="_blank" href="phone/len/k5 note.jpg"><img src="phone/len/k5 note.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">大有可玩 Lenovo K5 Note</div>
+        </div>
+        </div>
+    </div>
+
+    <!--魅族商品-->
+    <div class="meizu">魅族</div>
+    <div class="icon_mz_en">Meizu.com</div>
+    <hr size="2" color="##8DB6CD" width="100%">
+    <div class="pro_mz">
+        <div class="mz_pic"><div class="mz_pic_a" a target="_blank" href="phone/mz/note8.jpg"><img src="phone/mz/note8.jpg" style="width:260px;height:250px;"></a>
+            <div class="desc">国民拍照手机 魅族 note8</div>
+        </div>
+        </div>
+        <div class="mz_pic"><div class="mz_pic_a" a target="_blank" href="phone/mz/note9.jpg"><img src="phone/mz/note9.jpg" style="width:260px;height:250px;"></a>
+            <div class="desc">大核大智慧 魅族 note9</div>
+        </div>
+        </div>
+        <div class="mz_pic"><div class="mz_pic_a" a target="_blank" href="phone/mz/m15.jpg"><img src="phone/mz/m15.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">暗光双摄 魅族15</div>
+        </div>
+        </div>
+        <div class="mz_pic"><div class="mz_pic_a" a target="_blank" href="phone/mz/16x.jpg"><img src="phone/mz/16x.jpg" style="width:250px;height:250px;"></a>
+            <div class="desc">轻奢旗舰 魅族16X</div>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--商品配件-->
+
+<div class="parts">
+
+    <!--耳机配件-->
+<div class="earpod">
+    <div class="ear_title">🎧耳机配件</div>
+<table id="parts_earpod">
+<tr>
+    <td><img src="parts/airpods.png" height="110" width="110" alt="airpods"/></td><td><img src="parts/freebuds.png" height="130" width="110" alt="freebuds"/></td>
+    <td><img src="parts/glabuds.png" height="130" width="130" alt="galaxybuds"/></td><td><img src="parts/miair.png" height="150" width="120" alt="miair"/></td>
+    <td><img src="parts/mzair.png" height="130" width="120" alt="mzair"/></td><td><img src="parts/opair.png" height="150" width="150"/></td>
+</tr>
+<tr>
+    <td><span>Apple AirPods 1</span></td> <td><span>华为Freebuds</span></td> <td><span>三星Galaxy Buds</span></td>
+    <td><span>小米蓝牙耳机air</span></td> <td><span>魅族POP蓝牙耳机</span></td> <td><span>OPPO O-Free</span></td>
+</tr>
+</table>
+</div>
+    <!--数据线&充电头-->
+    <div class="charge">
+        <div class="charge_title">🔌电源适配器/数据线</div>
+        <table id="parts_charge">
+            <tr>
+                <td><img src="parts/ip_charge_1.png" height="130" width="130"/><img src="parts/ip_charge.png" height="110" width="110"/></td>
+                <td><img src="parts/mi_charge_1.png" height="130" width="130"/><img src="parts/mi_charge.png" height="110" width="110"/></td>
+                <td><img src="parts/mz-charge_1.png" height="130" width="130"/><img src="parts/mz-charge.png" height="110" width="110"/></td>
+                <td><img src="parts/op_vooc_2.png" height="130" width="110"/><img src="parts/op_vooc.png" height="110" width="110"/></td>
+            </tr>
+            <tr>
+                <td><span>Apple lighting快充</span></td> <td><span>小米有线快充</span></td> <td><span>魅族有线快充</span></td> <td><span>OPPO闪充</span></td>
+            </tr>
+            <tr>
+                <td><img src="parts/sm_charge_1.png" height="150" width="150"/><img src="parts/sm_charge.png" height="130" width="100"/></td>
+                <td><img src="parts/vi_charge_1.png" height="130" width="130"/><img src="parts/vi_charge.png" height="110" width="110"/></td>
+                <td><img src="parts/hw_charge_1.png"height="150" width="150"/><img src="parts/hw_charge.png" height="110" width="110"/></td>
+                <td><img src="parts/mi_audio.png" height="70" width="140"/></td>
+            </tr>
+            <tr>
+                <td><span>三星有线快充</span></td> <td><span>vivo有线快充</span></td> <td><span>华为有线快充</span></td> <td><span>小米Audio转接线</span></td>
+            </tr>
+            <tr>
+                <td><img src="parts/ip-wx-charge.png" height="140" width="140"/></td>
+                <td><img src="parts/mi-wx-charge.png" height="140" width="140"/></td>
+                <td><img src="parts/sm-wx-charge.png" height="130" width="150"/></td>
+                <td><img src="parts/mz-wx-charge.png" height="140" width="140"/></td>
+            </tr>
+            <tr>
+                <td><span>Apple Aircharge</span></td> <td><span>小米无线闪充</span></td> <td><span>三星无线快充</span></td> <td><span>魅族无线快充</span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!--返回顶部-->
+<span ><p id="back-to-top"><a href="#top">
+</a></p></span>
+
+<!--底部按钮及链接-->
+<hr size="2" color="#E5E5E5">
+<button class="button" onclick="myFunction()"><span>主流手机商城</span></button>
+<p style="font-size: 13px;">*更多商品详情请进入官网查询</p>
+<p class="mall_href" style="text-align: center;color: #4876FF;">
+    <a href="https://www.mi.com">小米商城</a> &nbsp;|&nbsp; <a href="https://sale.vmall.com/honor.html">华为商城</a>&nbsp;|&nbsp;
+    <a href="http://www.oppo.com/cn/">OPPO手机官网</a> &nbsp;|&nbsp; <a  href="http://www.vivo.com.cn">Vivo智能手机官网网站</a>&nbsp;|&nbsp;
+    <a href="https://www.apple.com/cn/">Apple</a> &nbsp;|&nbsp; <a  href="https://www.samsung.com/cn/">三星电子</a>&nbsp;|&nbsp;
+    <a href="https://www.lenovo.com.cn">联想商城</a> &nbsp;|&nbsp; <a  href="https://www.meizu.com">魅族官网</a>
+</p>
+<hr size="1" width="100%" color="#6495ed">
+<footer>
+    <p style="font-size:15px;text-align:center;">Copyright©️ 江西现代学院&nbsp;&nbsp;|&nbsp;&nbsp;phone-shop&nbsp;&nbsp;|&nbsp;&nbsp;<img src="image/tel.png" style="width:55px;height: 55px;" ><span>消费者权益:(Tel)12315</span></p>
+</footer>
+
+<!--登录拦截判定-->
+<script>
+    function display() {
+        var a='<%=session.getAttribute("userid")%>';
+        if(a =="null" || a==""){
+            window.location.href="PhoneS.html";
+            alert("请先登录");
+        }else {
+            document.getElementById('check_session').style.display = "none";
+            document.getElementById('link_coll').style.display = "";
+            document.getElementById('link_order').style.display = "";
+            document.getElementById('link_user').style.display = "";
+        }
+    }
+    </script>
+
+<!--储存userid/cookies记录-->
+<script type="text/javascript">
+    var userid = document.getElementById('userid'),
+        password = document.getElementById('password'),
+        check = document.getElementById('rem-me'),
+        localUserid = localStorage.getItem('userid') || ''; //获取到user的值并保存
+    localPassword = localStorage.getItem('password') || ''; //获取到password的值并保存
+    userid.value = localUserid;
+    password.value = localPassword;
+    if (localUserid !== '' && localPassword !== '') {
+        check.setAttribute('checked', '');
+    }
+
+    function fn() {
+        if (check.checked) {
+            localStorage.setItem('userid', userid.value);
+            localStorage.setItem('password', password.value);
+        } else {
+            localStorage.setItem('userid', '');
+            localStorage.setItem('password', '');
+        }
+    }
+</script>
+
+<!--底部按钮js-->
+<script>
+    function myFunction(){
+        alert("无效按钮，请点击下方链接");
+    }
+</script>
+</body>
+</html>

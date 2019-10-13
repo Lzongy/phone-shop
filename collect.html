@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" >
+	<meta name="viewport"  content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no"><title>个人收藏</title>
+<link href="css/coll.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.3.1.min.js"></script>
+<script> 
+$(function(){
+	$(function(){
+	$(window).scroll(function(){
+		if(($window).scrollTop()>200){
+			//当页面大于100像素即显示
+			$("#back-to-top").fadeIn(1500);
+		}
+		else{
+			$("#back-to-top").fadeOut(1500);
+		}
+	});
+	$("#back-to-top").click(function(){
+		if($('html').scrollTop()){
+			$('html').animate({ scrollTop:0},1000);
+			return flash;
+		}
+		$('body').animate({ scrollTop:0},1000);
+		return flash;
+	});
+  });
+});
+</script>
+</head>
+<body>
+<div id="menu">
+<ul>
+<li><a href="main.html">首页</a></li>
+<li><a href="order.html">我的订单</a></li>
+<li><a href="userinfo.html">用户中心</a></li>
+<li><a href="about.html">关于</a></li>
+<li><a href="enter.html" style="float:right;">退出登录</a></li> 
+</ul>
+</div>
+<!--顶部导航条-->
+<h1>个人收藏</h1>
+<hr size="2" width="100%" color="dodgerblue"></br>
+<div id="left-menu">
+	<ul>
+		<li><a href="#mi"><span>小米</span></a></li></br>
+		<li><a href="#hw"><span>华为</span></a></li></br>
+		<li><a href="#op"><span>oppo</span></a></li></br>
+		<li><a href="#vi"><span>vivo</span></a></li></br>
+		<li><a href="#ip"><span>iPhone</span></a></li></br>
+		<li><a href="#sm"><span>Samsung</span></a></li></br>
+		<li><a href="#len"><span>Lenovo</span></a></li></br>
+		<li><a href="#mz"><span>魅族<span></a></li>
+		</ul>
+		</div>
+		<!--左侧实现页面内快速定位-->
+		<div class="icon-mi"><a name="mi">小米</a>
+			</div>
+<div class="coll-con">	
+	</div>
+	<p class="num-text" style="font-size: 18px;text-align: right;margin:0 10px 0 0;">总计收藏#件</p>
+			<div class="icon-hw"><a name="hw">华为</a>
+				</div>
+    <div class="coll-con">
+		</div>
+			<p class="num-text" style="font-size: 18px;text-align: right;margin:0 10px 0 0;">总计收藏#件</p>
+					<div class="icon-oppo"><a name="op">OPPO</a>
+						</div>
+		<div class="coll-con">
+			</div>
+				<p class="num-text" style="font-size: 18px;text-align: right;margin:0 10px 0 0;">总计收藏#件</p>
+						<div class="icon-vivo"><a name="vi">vivo</a>
+							</div>
+				
+			<div class="coll-con">
+				</div>
+					<p class="num-text" style="font-size: 18px;text-align: right;margin:0 10px 0 0;">总计收藏#件</p>
+							<div class="icon-iphone"><a name="ip">iPhone</a>
+								</div>
+					
+				<div class="coll-con">
+					</div>
+						<p class="num-text" style="font-size: 18px;text-align: right;margin:0 10px 0 0;">总计收藏#件</p>
+								<div class="icon-Samsung"><a name="sm">Samsung</a>
+									</div>
+						
+					<div class="coll-con">
+						</div>
+							<p class="num-text" style="font-size: 18px;text-align: right;margin:0 10px 0 0;">总计收藏#件</p>
+									<div class="icon-lenovo"><a name="len">联想</a>
+										</div>
+							
+						<div class="coll-con">
+							</div>
+								<p class="num-text" style="font-size: 18px;text-align: right;margin:0 10px 0 0;">总计收藏#件</p>
+										<div class="icon-mz"><a name="mz">魅族</a>
+											</div>
+										<div class="coll-con">
+												</div>
+													<p class="num-text" style="font-size: 18px;text-align: right;margin:0 10px 0 0;">总计收藏#件</p>
+													<!--商品收藏容器-->
+													<span><p id="back-to-top"><a href="#top">
+													<span></span></a></p></span>
+													<!--返回顶部按钮-->
+<hr size="1" width="100%" color="#6495ed">
+<footer>
+	<p style="font-size:15px;text-align:center;">Copyright©️ 江西现代学院&nbsp;&nbsp;|&nbsp;&nbsp;phone-shop&nbsp;&nbsp;|&nbsp;&nbsp;<img src="image/tel.png" style="width:55px;height: 55px;" ><span>消费者权益:(Tel)12315</span></p>
+</footer>
+</body>
+</html>

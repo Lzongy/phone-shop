@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" >
+		<meta name="viewport"  content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">		<title>联系&关于</title>
+		<link href="css/about.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+	<div id="hidebg"></div>
+	<div id="feedform" class="formsign" style="display: none;">
+		<!--弹出窗口-->
+		<div class="formclose">
+			<span style="text-align: center;font-size: 20px;">信息反馈/建议</span><img src="image/close.png" width="35px" height="35px"  onclick="closebtn()">
+		</div>
+		<!--关闭按钮-->
+		<div class="feedback">
+			<form action="php/feedback.php" method="post">
+				<p><textarea rows="4" cols="25" wrap="hard" name="feedback">
+				</textarea></p>
+				<p class="tip">*将以匿名的方式提交反馈</p>
+				<p class="formtext"><input type="Submit" name="Submit" value="发送反馈">
+					<input type="reset" value="清除" name="button2"></p>
+			</form>
+		</div>
+	</div>
+		<a href="javascript:history.back(-1)" style="text-decoration: none;"><<返回上一级</a>
+		<h1><a href="#" onclick="feed()" class="feed">关于我们</a></h1>
+		<section>
+			<p>联系我们：0791-000000&nbsp;&nbsp;|&nbsp;&nbsp;
+				<span>邮箱地址：1060673403@qq.com</span></p>
+		</section>
+		<div class="container">
+			<div class="contain-item">《PhoneShop》主要运用HTML5（html）以及CSS3(css)、JavaScript语言实现前端页面设计 运用div标签来实现页面简单布局</br>
+				使用PHP+MySQL数据库实现数据库数据操作
+			</br></br>参考网站：<p class="link">CSDN技术社区（csdn.net) <a href="https://www.csdn.net">“https://www.csdn.net”</a></p>
+			<p class="link">菜鸟教程（runoob.com）<a href="http://www.runoob.com/">“http://www.runoob.com/”</a></p>
+			<p class="link">W3Shool技术教程<a href="http://www.w3school.com.cn">"http://www.w3school.com.cn"</a></p>
+			<p class="link">渐变色颜色参照（itmeo）<a href="https://webgradients.com">“https://webgradients.com”</a></p>
+			<p class="link">RGB颜色参照（rgb.com）<a href="https://www.114la.com/other/rgb.htm">“https://www.114la.com/other/rgb.htm”</a></p>
+			</div>
+			</div>
+		<hr size="1" width="100%" color="#6495ed">
+		<footer>
+			<p style="font-size:15px;text-align:center;">Copyright©️ 江西现代学院&nbsp;&nbsp;|&nbsp;&nbsp;phone-shop&nbsp;&nbsp;|&nbsp;&nbsp;<img src="image/tel.png" style="width:55px;height: 55px;" ><span>消费者权益:(Tel)12315</span></p>
+		</footer>
+	</body>
+	<script>
+		//	点击超链接 页面自动切换跳转
+		function feed()
+		{
+			var hideobj=document.getElementById("hidebg");
+			hidebg.style.display="block";
+			//显示隐藏层
+			hidebg.style.height=document.body.clientHeight+"px";
+			//设置隐藏层的高度为当前页面高度
+			document.getElementById('feedform').style.display="";
+			//显示弹出层
+		}
+		//点击链接弹出登录窗口
+		function closebtn() {
+			document.getElementById('feedform').style.display="none";
+			document.getElementById('hidebg').style.display="none";
+		}
+		//点击右上角关闭图标 关闭任一界面
+	</script>
+
+</html>

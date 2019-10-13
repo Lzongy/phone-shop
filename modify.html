@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" >
+		<meta name="viewport"  content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">		<title>密码修改</title>
+		<link rel="stylesheet" href="css/repw.css" style="text/css">
+		<script serc="js/pw.js"></script>
+	</head>
+	<body>
+				<a href="javascript:history.back(-1)" style="text-decoration: none;"><<返回上一级</a>
+				<!--js返回上一级-->
+		<h1>密码修改</h1>
+		<p style="font-size: 15px; float: right;">*请注意：忘记密码只可通过账号找回</p>
+		<div id="pw-container">
+			<div class="pw-item">
+				<form action="php/pwcheck.php" method="post">
+				<li class="pw"><span>你的账号ID:</span>
+				<input type="text" name="userid" placeholder="请输入你的ID"  oninvalid="setCustomValidity('请输入你的ID');" required></li>
+				<li class="pw"><span>原密码:</span>
+				<input type="password" name="oldpassword" placeholder="请输入原密码"></li>
+				<li class="pw"><span>新密码:</span>
+				<input type="password" name="password" placeholder="牢记新密码" pattern="[a-z0-9_*+#/\@]" oninvalid="setCustomValidity('请输入正确的密码格式');" minlength="6" required></li>
+				<li class="pw"><span>请确认新密码:</span>
+				<input type="password" name="repassword" placeholder="请再次确认新密码" oninvalid="setCustomValidity('请再次确认密码');" required></li>
+				<!--表单验证-->
+				<input type="submit" name="submit"  class="btn" onclick="return confirm('确认修改？')" value="确定修改">
+				<!--表单按钮js验证-->
+				</form>
+			</div>
+			</div>
+			<footer>
+				<p style="text-align: center;font-size: 15px; color:black;">Copyright©️ 江西现代学院&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;phone-shop</p>
+				</footer>
+				<script>
+				$(document).ready(function(){
+				    $('.btn').click(function(){
+				        if(confirm('确定修改？'))
+				        {
+				            alert('确定');
+				　　　　　　　window.location.href="enter.html";
+				//确认跳转到enter
+				        }else{
+				            return false;
+				        }
+				    })
+				});
+				</script>
+	</body>
+</html>

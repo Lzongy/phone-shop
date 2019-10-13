@@ -1,0 +1,99 @@
+body{
+	background:url('../image/system.jpg') no-repeat;
+	background-attachment:fixed;
+	background-size:100% 100%;
+	margin: 0;
+}
+/*页面背景设置*/
+h1{
+	text-align: center;
+	font-family: "arial, helvetica, sans-serif";
+}
+/*大标题*/
+.tip{
+	color:orangered !important;
+	font-size: 13px;
+}
+/*密码提示字体样式设置*/
+#menu ul{
+list-style-type:none;
+text-decoration:none;
+background:#00000000;
+overflow:hidden;
+width:100%;
+height:35px;
+margin:0; 
+padding:3px;
+top:0;
+position:absolute;
+}
+#menu ul li{
+display:inline;
+}
+#menu ul li a{
+	color:cornflowerblue;
+text-decoration:none;
+font-size:17px;
+padding-left:15px;
+padding-right:15px;
+}
+#menu ul li a:hover{
+	color:#add8e8;
+}
+/*左上角链接样式*/
+.btn{
+	background:#e6e6fa;
+	width:90px;
+	height:35px;
+	border-radius: 9px;
+	font-size: 13px;
+	margin: 10px 15px 0 25px ;
+}
+.btn1{
+	background:#e6e6fa;
+	width:90px;
+	height:35px;
+	border-radius: 9px;
+	font-size: 13px;
+	margin: 10px 15px 0 25px ;
+}
+/*表单按钮样式*/
+input[type="text"],[type="password"],[type="email"]{
+	width:200px;
+	height: 30px;
+	border-radius: 9px;
+	font-size: 15px;
+}
+input[type="number"]{
+	width:60px;
+	height: 20px;
+	border-radius: 9px;
+	font-size: 15px;
+}
+input:hover{
+	box-shadow: 0 2px 4px 2px gray;
+}
+/*表单框样式*/
+.flex-reg{
+	width:700px;
+	height:350px;
+    display:-webkit-flex;
+	display:flex;
+	margin:130px 460px;
+}
+.reg-item{
+	text-align:center;
+	width:600px;
+	height:350px;
+	margin:0 -25px;
+	font-size:18px;
+	border:2px solid;
+	border-radius:15px;
+}
+/*弹性盒子样式*/
+.footer{
+	font-size: 15px;
+	color:black;
+	text-align: center;
+}
+/*页脚样式*/

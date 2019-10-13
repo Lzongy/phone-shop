@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/user.css" rel="stylesheet" type="text/css" >
+	<link href="css/userform.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+</head>
+	<body>
+
+	<!--遮罩层-->
+	<div id="hidebg"></div>
+
+	<!--个人资料容器-->
+	<div id="userform" class="formsign" style="display: none;">
+		<!--关闭按钮-->
+		<div class="formclose">
+			<span style="text-align: center;font-size: 20px;">*个人资料修改</span><img src="image/close.png" width="35px" height="35px"  onclick="closebtn()">
+		</div>
+		<div class="userinfo">
+			<form action="php/upuser.php" method="post">
+				<p class="formtext"><label>你的ID:</label>
+					<input type="text" placeholder="输入ID" name="userid" oninvalid="setCustomValidity('请输入正确的用户名');" required></p>
+				<p class="formtext"><label>真实姓名:</label>
+					<input type="text" placeholder="***" name="realname"  oninvalid="setCustomValidity('请输入真实姓名');" required></p>
+				<p class="formtext"><label>性别:</label>
+					<input type="radio" name="sex" value="男">男
+					<input type="radio" name="sex" value="女">女</p>
+				<p class="formtext"><label>出生年月:</label>
+					<input type="number"name="years" min="1970" max="2019">年
+					<input type="number" name="mon" min="1" max="12">月
+					<input type="number" name="days" min="1" max="31">日
+				<label>星座：</label><select  name="star" class="star">
+					<option value="白羊座">白羊座</option>
+					<option value="金牛座">金牛座</option>
+					<option value="射手座">射手座</option>
+					<option value="c天蝎座">天蝎座</option>
+					<option value="水瓶座">水瓶座</option>
+					<option value="天秤座">天秤座</option>
+					<option value="双子座">双子座</option>
+					<option value="双鱼座">双鱼座</option>
+					<option value="摩羯座">摩羯座</option>
+					<option value="处女座">处女座</option>
+					<option value="狮子座">狮子座</option>
+					<option value="巨蟹座">巨蟹座</option>
+			</select></p>
+				<p class="formtext"><label>邮箱地址：</label>
+					<input type="text" name="email"></p>
+				<p class="formtext"><input type="Submit" name="Submit" value="更新信息">
+					<input type="reset" value="重置" name="button2"></p>
+				<div class="change">
+					<p>👉点击去更改<a href="#" style="text-decoration: none;">地址信息</a></p>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--地址容器-->
+    <div id="addform" class="formsign" style="display: none;">
+		<div class="formclose">
+			<span style="text-align: center;font-size: 20px;">*收货地址修改</span><img src="image/close.png" width="35px" height="35px"  onclick="closebtn()">
+		</div>
+		<div class="addinfo">
+			<form action="php/address.php" method="post">
+                <p class="formtext"><label>用户名:</label>
+                    <input type="text" name="userid"  placeholder="请输入用户ID" oninvalid="setCustomValidity('用户名为空')" required></p>
+				<p class="formtext"><label>*所在地:</label>
+					<input type="text" name="Procity" placeholder="请输入省份/城市" oninvalid="setCustomValidity('地址为空')" maxlength="50" required></p>
+				<p class="formtext"><label>*地址详情:</label>
+					<textarea  rows="3" cols="25" name="addinfo" placeholder="请输入详细地址信息，如街道" oninvalid="setCustomValidity('详细地址为空')" maxlength="200" required></textarea></p>
+				<p class="foemtext"><label>邮政编码:</label>
+					<input type="text" name="code" placeholder="请输入6位邮政编码" maxlength="6" minlength="6"></p>
+				<p class="formtext"><lable>*收件人姓名:</lable>
+					<input type="text" name="username" placeholder="请输入收件人姓名" oninvalid="setCustomValidity('收件人姓名为空')" maxlength="20"  required ></p>
+				<p class="formtext"><label>*联系方式:</label>
+					<input type="text" name="tel" placeholder="请输入11位手机号" oninvalid="setCustomValidity('号码位空')" maxlength="11" minlength="11" required></p>
+				<p class="formtext"><input type="Submit" name="Submit" value="更新信息">
+					<input type="reset" value="重置" name="button2"></p>
+				<div class="change">
+					<p>👉点击去更改<a href="#" style="text-decoration: none;">个人信息</a></p>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--注销账户-->
+	<div id="outform"  style="display: none">
+		<div class="formclose">
+			<span style="text-align: center;font-size: 20px;">账户注销</span><img src="image/close.png" width="35px" height="35px"  onclick="closebtn()">
+		</div>
+		<div class="user_out">
+			<form action="php/out.php" method="post">
+				<p class="formtext"><label>用户名:</label>
+					<input type="text" name="userid"></p>
+				<p class="tip">*输入用户名进行最后确认</p><br>
+				<p class="formtext"><input type="Submit" name="Submit" value="确认注销">
+					<button  type="button" onclick="outcancel()" id="cancel">取消注销</button></p>
+			</form>
+		</div>
+	</div>
+
+	<!--底部导航条-->
+	<div id="menu">
+		<ul>
+		<li><a href="main.html">首页</a></li>
+		<li><a href="collect.html">收藏夹</a></li>
+		<li><a href="order.html">我的订单</a></li>
+		<li><a href="about.html">关于</a></li>
+		</ul>
+		</div>
+		<h1>个人中心</h1>
+		<hr width="100%" size=2 color=gray>
+	<!--左侧导航条-->
+		<div id="left-menu" >
+			<ul>
+				<li><a href="#" style="color:#66cdaa;">个人资料</a></li></br>
+				<li><a href="#" onclick="info()">信息修改</a></li></br>
+				<li><a href="modify.html">密码修改</a></li></br>
+				<li><a href="collect.html">我的收藏</a></li></br>
+				<li><a href="order.html">订单详情</a></li></br>
+				<li><a href="enter.html">退出登录</a></li></br>
+				<li><a href="#" onclick="userout()">注销登录</a></li>
+				</ul>
+				</div>
+	<!--数据展示-->
+	<div class="userfiles">
+		<p style="text-align: left;color:#1C86ee;font-size: 20px;">你好，你可以在此页面进行个人资料的查看与完善 /</p>
+		<div class="u_img"><img src="image/u_timg.png" width="100px" height="100px"/>
+			<p>你好，</p>
+		</div>
+		<div class="u_info">
+		<table>
+			<tr>
+				<td>*用户名：</td>
+				<td> <input type="text" name="realname" /></td>
+			</tr>
+			<tr>
+				<td>真实姓名：</td>
+				<td> <input type="text" name="realname" /></td>
+			</tr>
+			<tr>
+				<td>出生年月：</td>
+				<td> <input type="text" name="realname" /></td>
+			</tr>
+			<tr>
+				<td>性别：</td>
+				<td> <input type="text" name="realname" /></td>
+			</tr>
+			<tr>
+				<td>联系方式：</td>
+				<td> <input type="text" name="realname" /></td>
+			</tr>
+			<tr>
+				<td>邮箱地址：</td>
+				<td> <input type="text" name="realname" /></td>
+			</tr>
+			<tr>
+				<td>居住地：</td>
+				<td> <input type="text" name="realname" /></td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<hr size="1" width="100%" color="#6495ed">
+	<footer>
+				<p style="font-size:15px;text-align:center;">Copyright©️ 江西现代学院&nbsp;&nbsp;|&nbsp;&nbsp;phone-shop&nbsp;&nbsp;|&nbsp;&nbsp;<img src="image/tel.png" style="width:55px;height: 55px;" ><span>消费者权益:(Tel)12315</span></p>
+    </footer>
+
+<!--表单框-->
+	<script>
+		$(function ()
+		{
+			$('.change a').click(function ()
+			{
+				$('.formsign').animate({height: 'toggle', opacity: 'toggle'}, 'slow');
+			});
+		})
+		//	点击超链接 页面自动切换跳转
+		function info()
+		{
+			var hideobj=document.getElementById("hidebg");
+			hidebg.style.display="block";
+			//显示隐藏层
+			hidebg.style.height=document.body.clientHeight+"px";
+			//设置隐藏层的高度为当前页面高度
+			document.getElementById('userform').style.display="";
+			//显示弹出层
+		}
+		//点击链接弹出登录窗口
+		function closebtn() {
+			document.getElementById('userform').style.display="none";
+			document.getElementById('addform').style.display="none";
+			document.getElementById('outform').style.display="none";
+			document.getElementById('hidebg').style.display="none";
+		}
+		//点击右上角关闭图标 关闭任一界面
+		function outcancel(){
+			document.getElementById('outform').style.display="none";
+			document.getElementById('hidebg').style.display="none";
+		}
+		function userout(){
+			var hideobj=document.getElementById("hidebg");
+			hidebg.style.display="block";
+			hidebg.style.height=document.body.clientHeight+"px";
+			document.getElementById('outform').style.display="";
+		}
+	</script>
+
+
+
+	</body>
+</html>

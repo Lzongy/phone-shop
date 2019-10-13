@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" >
+		<meta name="viewport"  content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">		<title>订单详情</title>
+		<link href="css/order.css" rel="stylesheet" style="text/css">
+		<script src="js/back.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+		   window.onload=function(){
+		    //页面加载完成触发事件
+		     function myClick(id,fun){
+		         var btn=document.getElementById(id);
+		         btn.onclick=fun;
+		     }  
+		     var check=document.getElementsByName("items");
+		     var btn=document.getElementById("checkAllBox");
+		     myClick("checkAllBox",function(){
+		         for(var i=0;i<check.length;i++){
+		                check[i].checked=this.checked;
+		            }
+		         });
+		 for(var i=0;i<check.length;i++){
+		         check[i].onclick=function(){
+		             btn.checked=true;
+		             for(var j=0;j<check.length;j++){
+		                 if(!check[j].checked){
+		                     btn.checked=false;
+		                     break;     
+		                 }
+		                     
+		             }
+		         };
+		     }
+		   };
+		</script>
+		<style>
+			a{
+				text-decoration: none;
+			}
+			</style>
+	</head>
+	<body>
+		<a name="#top"></a>
+	<div id="menu">
+	<ul>
+	<li><a href="main.html">首页</a></li>
+	<li><a href="collect.html">收藏夹</a></li>
+	<li><a href="userinfo.html">用户中心</a></li>
+	<li><a href="order.html">我的订单</a></li>
+	<li><a href="about.html">关于</a></li>
+	</ul>
+	</div>
+	<!--顶部导航条-->
+	<h1>我的订单<img src="image/cart.png" class="cartIcon"></h1>
+	<hr width="100%" size=2  color=#4876ff>
+		<a name="top"></a>
+	<div id="left-menu">
+		<ul>
+			<li><a href="userinfo.html">个人资料</a></li></br>
+			<li><a href="collect.html">我的收藏</a></li></br>
+			<li><a href="#" style="color:#66cdaa;">订单详情</a></li></br>
+			<li><a href="enter.html">退出登录</a></li></br>
+			</ul>
+			</div>
+			<!--左侧导航条-->
+			<input type="search" name="order-num" placeholder="输入商品ID查找" class="search">
+			<div class="order-flex">
+				<div class="order-item">
+					<div class="user-item">
+						<li><span>姓名：<label>admin</label></span></li>
+						<li><span>性别：<label>男</label></span></li>
+						<li><span>联系号码：<label>12345678910</label></span></li>
+						<li><span>收货地址：<label>江西南昌</label></span></li>
+						</div>
+						<!--顶部用户信息-->
+						<hr size="2" color="" width="100%">
+						<table id="tab" >
+							<th>全选/全不选<input type="checkbox" id="checkAllBox"></th>
+							<th>商品ID</th>
+							<th>商品名称</th>
+							<th>商品详情</th>
+							<th>价格</th>
+							<th>数量</th>
+							<th>总价</th>
+							<th></th>
+							<tr id="del">
+							<td><input type="checkbox" name="items"></td><td>ID</td><td>Model</td><td>Products Information</td><td>Price</td><td>Num</td><td>Total</td><td><a href="#" onclick="del()">删除</a></td>
+								</tr>
+							<tr id="del">
+								<td><input type="checkbox" name="items"></td><td>M09</td><td>小米9</td><td>6+128G</td><td>¥2999</td><td>1</td><td>2999</td><td><a href="#" onclick="del()">删除</a></td>
+							</tr>
+							<tr id="del">
+								<td><input type="checkbox" name="items"></td><td>H20</td><td>华为 Mate20</td><td>6+128G</td><td>¥4999</td><td>2</td><td>9998</td><td><a href="#" onclick="del()">删除</a></td>
+							</tr>
+						</table>
+						<li style="list-style-type:none;"><span style="float: right;font-size: 23px;top:20px;right: 30px;">总计:</span></li>
+						<input type="submit" name="button"  value="买到就是赚到" class="btn" onclick="add()">
+					</div>
+				</div>
+				<!--所选商品表格信息-->
+				<div id="hidebg"></div>
+				<div id="add-to" style="display: none;">
+					<div class="add-text">
+						<span>请扫码进行支付</span>
+						</div>
+						<div class="pay-icon">
+							<img src="image/alipay-icon.png"/><img src="image/wechat-icon.png"/>
+							</div>
+							<div class="pay">
+						<img src= /><img src= />
+						</div>
+						<div class="fin">
+							<span onclick="closebtn()" style="float: left;color:red;" >❗️取消支付</span> 
+							<a href="javascript:location.reload();" style="float: right;color:green; text-decoration: none;">✅完成支付</a>
+							</div>
+					</div>
+				<span ><p id="back-to-top"><a href="#top">
+				</a></p></span>
+				<!--返回顶部按钮-->
+		<hr size="1" width="100%" color="#6495ed">
+		<footer>
+			<p style="font-size:15px;text-align:center;">Copyright©️ 江西现代学院&nbsp;&nbsp;|&nbsp;&nbsp;phone-shop&nbsp;&nbsp;|&nbsp;&nbsp;<img src="image/tel.png" style="width:55px;height: 55px;" ><span>消费者权益:(Tel)12315</span></p>
+		</footer>
+					<script type="text/javascript">
+						$(function(){
+							$("table#tab #del").click(function() {
+								$(this).remove();
+							});
+						});
+
+						function add(){
+							document.getElementById('add-to').style.display="";
+						   var hideobj=document.getElementById("hidebg");
+						   hidebg.style.display="block";  
+											//显示隐藏层
+						   hidebg.style.height="100%";
+											//设置隐藏层的高度为满屏
+						   document.getElementById('add-to').style.display=""; 
+											//显示弹出层
+						}
+						function closebtn(){
+							document.getElementById('add-to').style.display="none";
+							document.getElementById('hidebg').style.display="none";
+							window.opener.location.reload();
+						}
+						</script>
+	</body>
+</html>

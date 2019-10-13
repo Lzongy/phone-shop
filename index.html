@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>线上手机/Phone-Shop</title>
+    <meta http-equiv="X-UA-Compatible" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/formsign.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="hidebg"></div>
+<div id="loginform" class="formsign" style="display: none;">
+    <!--弹出登录窗口-->
+    <div class="formclose">
+        <span style="text-align: center;font-size: 20px;">请先登录</span><img src="image/close.png" width="35px" height="35px" onclick="closebtn()"  />
+    </div>
+    <!--窗口关闭按钮-->
+    <div class="login">
+        <form action="php/log.php" method="post">
+            <p class="formtext"><label>用户名:</label>
+                <input type="text" placeholder="请输入用户名" name="userid" oninvalid="setCustomValidity('请输入你的昵称ID');" required></p>
+            <p class="formtext"><label>密码:</label>
+                <input type="password" placeholder="请输入密码" name="password" oninvalid="setCustomValidity('请输入正确的密码');" required></p>
+            <p class="formtext"><input type="checkbox" id="rem-me" style="float: left;"><span style="float: left;color:#4876ff;">记住我</span>
+                <a href="modify.html" style="float: right; text-decoration: none;color: dodgerblue;">？忘记密码</a></p>
+            <p class="formtext"><input type="submit" value="登录" name="submit"></p>
+            <!--登录窗口表单-->
+            <div class="change">
+                <p>还没有账号？快去<a href="#" style="text-decoration: none;">注册</a>一个吧</p>
+            </div>
+            <!--登录/注册切换窗口链接-->
+        </form>
+    </div>
+</div>
+<div id="registerform" class="formsign" style="display: none;">
+    <!--弹出注册窗口-->
+    <div class="formclose">
+        <span style="text-align: center;font-size: 20px;">请先注册</span><img src="image/close.png" width="35px" height="35px"  onclick="closebtn()"  />
+    </div>
+    <!--关闭按钮-->
+    <div class="register">
+        <form action="php/reg.php" method="post">
+            <!--注册表单-->
+            <p class="formtext"><label>昵称:</label>
+                <input type="text" placeholder="输入昵称" name="userid" oninvalid="setCustomValidity('请输入用户名');" required></p>
+            <p class="formtext"><label>密码:</label>
+                <input type="password" placeholder="输入密码" name="password" pattern="[a-z0-9_*+#/\@]" oninvalid="setCustomValidity('请输入正确的密码格式');" minlength="6" required></p>
+            <p class="tip">*请注意密码必须6位及以上(小写字母，数字或划线)</p>
+            <p class="formtext"><label>确认密码:</label>
+                <input type="password" placeholder="输入密码" name="repassword" oninvalid="setCustomValidity('密码输入不一致')" required></p>
+            <p class="formtext"><label>性别:</label>
+                <input type="radio" name="sex" value="男">男
+                <input type="radio" name="sex" value="女">女</p>
+            <p class="formtext"><label>出生年月:</label>
+                <input type="number"name="years" min="1970" max="2019">年;
+                <input type="number" name="mon" min="1" max="12">月;
+                <input type="number" name="days" min="1" max="31">日</p>
+            <p class="formtext"><label>邮箱地址:</label>
+                <input type="email" name="email" placeholder="请输入可用邮箱地址" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"  oninvalid="setCustomValidity('请输入正确邮箱地址');" required></p>
+            <p class="formtext"><input type="Submit" name="Submit" value="注册">
+                <input type="reset" value="重置" name="button2"></p>
+            <p class="tip" >*注册完请尝试刷新界面</p>
+        </form>
+        <!--注册表单及验证规则-->
+        <div class="change">
+            <p>已有账号?快去<a href="#" style="text-decoration: none;">登录</a>吧</p>
+        </div>
+        <!--窗口切换-->
+    </div>
+</div>
+
+<!--表单处理-->
+
+<div id="header" style="width: 100%;height: 10% ;display: flex;display: -webkit-flex;">
+    <div class="logo" style="width: 20%;height: 100%" >
+        <img src="image/icon.png" height="100px" width=200px"/>
+    </div>
+<nav class="title" style="width: 80%;height: 100%;display:inline;">
+    <li><a href="main.html">主页</a></li>
+    <li style="float:right;">欢迎你，请先<a href="#" onclick="start()">登录/注册</a></li>
+    <li><a href="about.html">关于</a></li>
+    </nav>
+</div>
+<div class="maim_href">
+    <img src="image/main_index.png"/>
+</div>
+<div id="main_item">
+    <div class="item"><a href="main.html"><img src="image/Best.png" width="130px" height="130px" class="img_item"/></a></div>
+    <div class="item"><a href="https://2.taobao.com"><img src="image/old_new.png" width="130px" height="130px" class="img_item" /></a></div>
+    <div class="item"><a href="https://www.taobao.com"><img src="image/Others.png" width="130px" height="130px" class="img_item"/></a></div>
+    <div class="item"><a href="http://localhost:63342/phone-shop/about.html"><img src="image/sale_service.png" width="130px" height="130px" class="img_item"  /></a></div>
+</div>
+<!--底部版权-->
+<hr size="1" width="100%" color="#6495ed">
+<footer>
+    <p style="font-size:15px;text-align:center;">Copyright©️ 江西现代学院&nbsp;&nbsp;|&nbsp;&nbsp;phone-shop&nbsp;&nbsp;|&nbsp;&nbsp;<img src="image/tel.png" style="width:55px;height: 55px;" ><span>消费者权益:(Tel)12315</span></p>
+</footer>
+
+<!--触发表单事件-->
+<script>
+    $(function ()
+    {
+        $('.change a').click(function ()
+        {
+            $('.formsign').animate({height: 'toggle', opacity: 'toggle'}, 'slow');
+        });
+    })
+    //	点击超链接 页面自动切换跳转
+    function start()
+    {
+        var hideobj=document.getElementById("hidebg");
+        hidebg.style.display="block";
+        //显示隐藏层
+        hidebg.style.height=document.body.clientHeight+"px";
+        //设置隐藏层的高度为当前页面高度
+        document.getElementById('loginform').style.display="";
+        //显示弹出层
+    }
+    //点击链接弹出登录窗口
+    function closebtn() {
+        document.getElementById('loginform').style.display="none";
+        document.getElementById('registerform').style.display="none";
+        document.getElementById('hidebg').style.display="none";
+    }
+    //点击右上角关闭图标 关闭任一界面
+</script>
+</body>
+</html>
